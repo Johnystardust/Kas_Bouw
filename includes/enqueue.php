@@ -17,10 +17,12 @@ function add_my_custom_scripts(){
     // register scripts
     wp_register_script('my-jquery', get_stylesheet_directory_uri().'/assets/jquery/jquery-1.12.1.min.js');
     wp_register_script('bootstrap-js', get_stylesheet_directory_uri().'/assets/bootstrap/js/bootstrap.min.js');
+    wp_register_script('my-javascript', get_stylesheet_directory_uri().'/assets/javascript/javascript.js');
 
     // enqueue scripts
     wp_enqueue_script('my-jquery');
     wp_enqueue_script('bootstrap-js');
+    wp_enqueue_script('my-javascript');
 }
 
 /*

@@ -30,7 +30,6 @@ get_template_part('header');
     <div class="image-darken"></div>
     <img src="<?php echo get_stylesheet_directory_uri().'/assets/images/sliderimage.png'; ?>" width="100%"/>
 </div>
-
 <?php
 /*
 |----------------------------------------------------------------
@@ -41,69 +40,94 @@ get_template_part('header');
 <div id="single-projecten" class="container-fluid container-capped">
     <div class="row">
         <div class="col-md-4 single-projecten-text">
-            <h1><?php echo get_field('title'); ?></span></h1>
+            <h1>Amazing <span style="color: #f6a500;">Design</span></h1>
             <div class="divider"><hr/></div>
 
-            <?php echo get_field('text'); ?>
+            <p>
+                Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.In enim justo, rhoncus ut. Aenean massa. penatibus et magnis dis parturient montes,
+                nasceturridiculus mus. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu In enim justo, rhoncus ut.Aenean massa. penatibus et magnis
+                dis parturient.
+                <br/>
+                <br/>
+                Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.In enim justo, rhoncus ut. Aenean massa. penatibus et magnis dis parturient montes,
+                nasceturridiculus mus.
+            </p>
 
             <div class="project-info">
                 <table>
                     <tr>
                         <td><i class="icon icon-user"></i><small>Klant:</small></td>
-                        <td><?php echo get_field('customer'); ?></td>
+                        <td>Robert Johnson</td>
                     </tr>
                     <tr>
                         <td><i class="icon icon-calendar"></i><small>Datum:</small></td>
-                        <td><?php echo get_field('date'); ?></td>
+                        <td>22 maart 2016</td>
                     </tr>
                     <tr>
                         <td><i class="icon icon-location"></i><small>Locatie:</small></td>
-                        <td><?php echo get_field('location'); ?></td>
+                        <td>Hoofdstraat, Barneveld</td>
                     </tr>
                 </table>
             </div>
         </div>
 
         <div class="col-md-8 no-padding single-projecten-images">
-            <?php
-            foreach(get_field('images') as $image){
+            <div class="col-md-12 project-image">
+                <a href="#">
+                    <div class="project-image-inner">
 
-                if($image['size']){
-                    switch($image['size']){
-                        case 'full' :
-                            $image_size = 'col-md-12';
-                        break;
-                        case 'half' :
-                            $image_size = 'col-md-6';
-                        break;
-                        case 'third' :
-                            $image_size = 'col-md-4';
-                        break;
-                    }
-                }
-                ?>
-                <div class="<?php echo $image_size; ?> project-image">
-                    <a href="<?php echo $image['image']; ?>" class="open-lightbox">
-                        <div class="project-image-inner">
-
-                            <div class="project-image-overlay">
-                                <div class="project-image-overlay-inner">
-                                    <div class="middle-wrap">
-                                        <i class="icon icon-search"></i>
-                                    </div>
+                        <div class="project-image-overlay">
+                            <div class="project-image-overlay-inner">
+                                <div class="middle-wrap">
+                                    <i class="icon icon-search"></i>
                                 </div>
-                                <div class="project-image-overlay-color"></div>
                             </div>
-
-                            <img src="<?php echo $image['image']; ?>" width="100%" />
+                            <div class="project-image-overlay-color"></div>
                         </div>
-                    </a>
-                </div>
-                <?php
-            }
-            ?>
+
+                        <img src="<?php echo get_stylesheet_directory_uri().'/assets/images/project-single-2.jpg'; ?>" width="100%" />
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-6 project-image">
+                <a href="#">
+                    <div class="project-image-inner">
+
+                        <div class="project-image-overlay">
+                            <div class="project-image-overlay-inner">
+                                <div class="middle-wrap">
+                                    <i class="icon icon-search"></i>
+                                </div>
+                            </div>
+                            <div class="project-image-overlay-color"></div>
+                        </div>
+
+                        <img src="<?php echo get_stylesheet_directory_uri().'/assets/images/project-single-3.jpg'; ?>" width="100%" />
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-6 project-image">
+                <a href="#">
+                    <div class="project-image-inner">
+
+                        <div class="project-image-overlay">
+                            <div class="project-image-overlay-inner">
+                                <div class="middle-wrap">
+                                    <i class="icon icon-search"></i>
+                                </div>
+                            </div>
+                            <div class="project-image-overlay-color"></div>
+                        </div>
+
+                        <img src="<?php echo get_stylesheet_directory_uri().'/assets/images/project-single-4.jpg'; ?>" width="100%" />
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
+
 
     <?php
     $next_post              = get_next_post();
@@ -134,19 +158,6 @@ get_template_part('header');
         </div>
     </div>
 
-</div>
-
-<?php
-/*
-|----------------------------------------------------------------
-|   Lightbox.
-|----------------------------------------------------------------
-*/
-?>
-<div id="lightbox">
-    <div class="lightbox-inner">
-        <img src="<?php echo get_stylesheet_directory_uri().'/assets/images/project-single-2.jpg'; ?>" height="100%" />
-    </div>
 </div>
 
 <?php
