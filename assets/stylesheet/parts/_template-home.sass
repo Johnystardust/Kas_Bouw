@@ -1,0 +1,117 @@
+#home-layout
+
+  #services-container
+    padding-top: 50px
+    padding-bottom: 50px
+    .services-row
+      .row
+        margin-top: 50px
+
+      .thumb
+        width: 100%
+        height: 150px
+        margin-bottom: 30px
+        overflow: hidden
+        img
+          width: 100%
+          height: auto
+
+  #testimonial-container
+    padding-top: 50px
+    padding-bottom: 50px
+    background-color: $light-grey
+    .testimonial-row
+      .testimonial-item
+        text-align: center
+        .testimonial-item-inner
+          background-color: #ffffff
+          padding: 30px
+
+        .quote-img
+          margin: 0 auto
+          margin-bottom: 25px
+
+        p
+          margin: 0
+
+  #recent-projects-container
+    padding-top: 50px
+    padding-bottom: 50px
+    .recent-projects-row
+      .project
+        overflow: hidden
+
+        .project-inner
+          position: relative
+
+        .project-overlay
+          position: absolute
+          width: 100%
+          height: 100%
+          top: 0
+          left: 0
+
+          .project-overlay-inner
+            position: relative
+            display: table
+            z-index: 1000
+            height: 100%
+            width: 100%
+            color: #ffffff
+            text-align: center
+            h3
+              margin-top: 0
+              position: relative
+              top: -160px
+              -webkit-transition: all 0.3s ease-in-out
+              -moz-transition: all 0.3s ease-in-out
+              -o-transition: all 0.3s ease-in-out
+              transition: all 0.3s ease-in-out
+            .divider
+              display: none
+              hr
+                border-color: #ffffff
+                margin: 0 auto
+            .category
+              margin-top: 10px
+              display: block
+              position: relative
+              top: 160px
+              -webkit-transition: all 0.3s ease-in-out
+              -moz-transition: all 0.3s ease-in-out
+              -o-transition: all 0.3s ease-in-out
+              transition: all 0.3s ease-in-out
+              span
+                margin-right: 5px
+              span:last-child
+                margin-right: 0
+
+          .project-overlay-color
+            position: absolute
+            width: 100%
+            height: 100%
+            top: 0
+            left: 0
+            background-color: $yellow
+            opacity: 0
+            -webkit-transition: all 0.3s ease-in-out
+            -moz-transition: all 0.3s ease-in-out
+            -o-transition: all 0.3s ease-in-out
+            transition: all 0.3s ease-in-out
+
+        img
+          width: 100%
+          height: auto
+
+
+      .project:hover
+        .project-overlay-color
+          opacity: 0.7
+
+        .project-overlay-inner
+          h3
+            top: 0
+          .divider
+            display: block
+          .category
+            top: 0

@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta name=viewport content="width=device-width, initial-scale=1">
 
-    <title>Kas Bouw</title>
+    <title>Kas Bouw | <?php echo get_the_title(); ?></title>
 
     <!-- Enqueue all the styles & scripts -->
     <?php wp_head(); ?>
