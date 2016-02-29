@@ -27,7 +27,6 @@ get_template_part('includes/partials/slider');
     <!-- Services Container -->
     <div id="services-container" class="container-fluid container-capped">
         <div class="row services-row">
-            <?php $i = 0; ?>
 
             <div class="title">
                 <h1><?php the_field('services_title'); ?></h1>
@@ -35,6 +34,8 @@ get_template_part('includes/partials/slider');
             </div>
 
             <?php
+            $i = 0;
+
             /*
             |----------------------------------------------------------------
             |   If the services have rows.

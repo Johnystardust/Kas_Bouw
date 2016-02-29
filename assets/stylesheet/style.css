@@ -284,12 +284,20 @@ nav {
             #about-us .row-services .services-inner .services-nav ul li a:hover {
               color: #f6a500;
               text-decoration: none; }
+            #about-us .row-services .services-inner .services-nav ul li a:focus {
+              text-decoration: none; }
             #about-us .row-services .services-inner .services-nav ul li .active {
               color: #f6a500; }
           #about-us .row-services .services-inner .services-nav ul li:first-child {
             margin-top: 0; }
       #about-us .row-services .services-inner .services-text {
+        overflow: hidden;
         padding-left: 50px; }
+        #about-us .row-services .services-inner .services-text .service-text {
+          position: relative;
+          display: none; }
+        #about-us .row-services .services-inner .services-text .active {
+          display: block; }
         #about-us .row-services .services-inner .services-text p {
           line-height: 26px; }
 

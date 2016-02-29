@@ -40,12 +40,23 @@
             a:hover
               color: $yellow
               text-decoration: none
+            a:focus
+              text-decoration: none
             .active
               color: $yellow
           li:first-child
             margin-top: 0
 
       .services-text
+        overflow: hidden
         padding-left: 50px
+
+        .service-text
+          position: relative
+          display: none
+        .active
+          display: block
+
+
         p
           line-height: 26px
