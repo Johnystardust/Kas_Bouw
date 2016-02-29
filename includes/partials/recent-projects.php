@@ -38,7 +38,9 @@
                 <a href="<?php the_permalink(); ?>">
                     <div class="col-md-4 project">
                         <div class="project-inner">
+
                             <div class="project-overlay">
+
                                 <div class="project-overlay-inner">
                                     <div class="middle-wrap">
                                         <h3><?php the_title(); ?></h3>
@@ -54,7 +56,9 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="project-overlay-color"></div>
+
                             </div>
                             <?php if(has_post_thumbnail()){
                                 the_post_thumbnail();

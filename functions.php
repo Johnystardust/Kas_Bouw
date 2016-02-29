@@ -36,7 +36,6 @@ function tvds_register_menu_init() {
 }
 add_action( 'init', 'tvds_register_menu_init' );
 
-
 /*
 |-----------------------------------------------------------------------------------------------------------------------
 |   Remove WYSIWYG editor from specific page.

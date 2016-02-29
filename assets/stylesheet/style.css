@@ -5,6 +5,11 @@
 .no-padding {
   padding: 0; }
 
+.middle-wrap-outer {
+  display: table;
+  height: 100%;
+  width: 100%; }
+
 .middle-wrap {
   display: table-cell;
   vertical-align: middle; }
@@ -231,22 +236,85 @@ nav {
 #single-projecten {
   padding-top: 50px;
   padding-bottom: 50px; }
-  #single-projecten .image-col {
+  #single-projecten .single-projecten-text h1 {
+    text-transform: uppercase; }
+  #single-projecten .single-projecten-text .project-info {
     margin-top: 30px; }
-  #single-projecten .image-col:first-child {
-    margin-top: 0; }
-  #single-projecten .project-info {
-    margin-top: 30px; }
-    #single-projecten .project-info td {
+    #single-projecten .single-projecten-text .project-info td {
       min-width: 105px;
       margin-top: 5px;
       padding-bottom: 5px; }
-    #single-projecten .project-info .icon {
+    #single-projecten .single-projecten-text .project-info .icon {
       color: #f6a500;
       font-size: 17px; }
-    #single-projecten .project-info small {
+    #single-projecten .single-projecten-text .project-info small {
       color: #999999;
       margin-left: 5px; }
+  #single-projecten .single-projecten-images .project-image {
+    margin-top: 30px;
+    overflow: hidden; }
+    #single-projecten .single-projecten-images .project-image .project-image-inner {
+      position: relative; }
+      #single-projecten .single-projecten-images .project-image .project-image-inner .project-image-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0; }
+        #single-projecten .single-projecten-images .project-image .project-image-inner .project-image-overlay .project-image-overlay-inner {
+          position: relative;
+          display: table;
+          z-index: 1000;
+          height: 100%;
+          width: 100%;
+          color: #ffffff;
+          text-align: center; }
+          #single-projecten .single-projecten-images .project-image .project-image-inner .project-image-overlay .project-image-overlay-inner i {
+            font-size: 46px;
+            position: relative;
+            top: -460px;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out; }
+        #single-projecten .single-projecten-images .project-image .project-image-inner .project-image-overlay .project-image-overlay-color {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-color: #f6a500;
+          opacity: 0;
+          -webkit-transition: all 0.3s ease-in-out;
+          -moz-transition: all 0.3s ease-in-out;
+          -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out; }
+  #single-projecten .single-projecten-images .project-image:nth-child(1) {
+    margin-top: 0 !important; }
+  #single-projecten .single-projecten-images .project-image:hover .project-image-overlay-color {
+    opacity: 0.7 !important; }
+  #single-projecten .single-projecten-images .project-image:hover .project-image-overlay-inner i {
+    top: 0 !important; }
+  #single-projecten .posts-nav {
+    margin-top: 50px; }
+    #single-projecten .posts-nav .next-post-link {
+      text-align: right; }
+      #single-projecten .posts-nav .next-post-link i:before {
+        text-align: right;
+        margin-right: 0; }
+    #single-projecten .posts-nav .previous-post-link i:before {
+      text-align: left;
+      margin-left: 0; }
+    #single-projecten .posts-nav a {
+      color: #ffffff;
+      background: #f6a500;
+      border-radius: 20px;
+      padding: 8px 20px; }
+      #single-projecten .posts-nav a i {
+        font-size: 11px; }
+    #single-projecten .posts-nav a:hover {
+      background: #2C353D;
+      text-decoration: none; }
 
 footer {
   padding-top: 50px;

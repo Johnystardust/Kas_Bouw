@@ -39,7 +39,7 @@ get_template_part('header');
 ?>
 <div id="single-projecten" class="container-fluid container-capped">
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 single-projecten-text">
             <h1>Amazing <span style="color: #f6a500;">Design</span></h1>
             <div class="divider"><hr/></div>
 
@@ -71,18 +71,90 @@ get_template_part('header');
             </div>
         </div>
 
-        <div class="col-md-8 no-padding">
-            <div class="col-md-12 image-col">
-                <img src="<?php echo get_stylesheet_directory_uri().'/assets/images/project-single-2.jpg'; ?>" width="100%" />
+        <div class="col-md-8 no-padding single-projecten-images">
+            <div class="col-md-12 project-image">
+                <a href="#">
+                    <div class="project-image-inner">
+
+                        <div class="project-image-overlay">
+                            <div class="project-image-overlay-inner">
+                                <div class="middle-wrap">
+                                    <i class="icon icon-search"></i>
+                                </div>
+                            </div>
+                            <div class="project-image-overlay-color"></div>
+                        </div>
+
+                        <img src="<?php echo get_stylesheet_directory_uri().'/assets/images/project-single-2.jpg'; ?>" width="100%" />
+                    </div>
+                </a>
             </div>
 
-            <div class="col-md-6 image-col">
-                <img src="<?php echo get_stylesheet_directory_uri().'/assets/images/project-single-3.jpg'; ?>" width="100%" />
+            <div class="col-md-6 project-image">
+                <a href="#">
+                    <div class="project-image-inner">
+
+                        <div class="project-image-overlay">
+                            <div class="project-image-overlay-inner">
+                                <div class="middle-wrap">
+                                    <i class="icon icon-search"></i>
+                                </div>
+                            </div>
+                            <div class="project-image-overlay-color"></div>
+                        </div>
+
+                        <img src="<?php echo get_stylesheet_directory_uri().'/assets/images/project-single-3.jpg'; ?>" width="100%" />
+                    </div>
+                </a>
             </div>
 
-            <div class="col-md-6 image-col">
-                <img src="<?php echo get_stylesheet_directory_uri().'/assets/images/project-single-4.jpg'; ?>" width="100%" />
+            <div class="col-md-6 project-image">
+                <a href="#">
+                    <div class="project-image-inner">
+
+                        <div class="project-image-overlay">
+                            <div class="project-image-overlay-inner">
+                                <div class="middle-wrap">
+                                    <i class="icon icon-search"></i>
+                                </div>
+                            </div>
+                            <div class="project-image-overlay-color"></div>
+                        </div>
+
+                        <img src="<?php echo get_stylesheet_directory_uri().'/assets/images/project-single-4.jpg'; ?>" width="100%" />
+                    </div>
+                </a>
             </div>
+        </div>
+    </div>
+
+
+    <?php
+    $next_post              = get_next_post();
+    $next_permalink         = get_permalink($next_post->ID);
+
+    $prev_post              = get_previous_post();
+    $prev_permalink         = get_permalink($prev_post->ID);
+
+    $previous_adjacent_post = get_adjacent_post(true, '', true);
+    $next_adjacent_post     = get_adjacent_post(true, '', false);
+    ?>
+
+    <div class="row posts-nav">
+        <div class="col-md-2 previous-post-link">
+            <?php
+            if($previous_adjacent_post){
+                echo '<a href="'.$prev_permalink.'"><i class="icon icon-left-open"></i>Vorige</a>';
+            }
+            ?>
+        </div>
+
+        <div class="col-md-2 col-md-offset-8 next-post-link">
+            <?php
+            if($next_adjacent_post){
+                echo '<a href="'.$next_permalink.'">Volgende<i class="icon icon-right-open"></i></a>';
+            }
+            ?>
         </div>
     </div>
 
