@@ -61,7 +61,7 @@ get_template_part('includes/partials/slider');
                         <div class="content">
                             <h4><?php echo $title; ?></h4>
                             <div class="divider"><hr/></div>
-                            <p><?php echo $text; ?></p>
+                            <?php echo $text; ?>
                         </div>
                     </div>
                     <?php

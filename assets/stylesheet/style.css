@@ -22,7 +22,9 @@
   background: #f6a500;
   border: none;
   border-radius: 20px;
-  padding: 8px 20px; }
+  padding: 8px 20px;
+  text-transform: uppercase;
+  font-size: 13px; }
 
 .button:hover {
   color: #ffffff;
@@ -82,6 +84,9 @@ strong {
 a {
   font-family: "Raleway", sans-serif; }
 
+td {
+  font-family: "Raleway", sans-serif; }
+
 #lightbox {
   position: fixed;
   width: 100%;
@@ -124,8 +129,15 @@ nav {
         nav .nav-menu ul li a {
           line-height: 80px;
           text-transform: uppercase;
-          color: #000000; }
-      nav .nav-menu ul .current_page_item a {
+          color: #000000;
+          font-size: 14px;
+          font-weight: 500; }
+        nav .nav-menu ul li a:hover {
+          color: #f6a500 !important;
+          text-decoration: none; }
+        nav .nav-menu ul li a:focus {
+          text-decoration: none; }
+      nav .nav-menu ul .current_page_item a, nav .nav-menu ul .current-menu-item a {
         color: #f6a500 !important; }
       nav .nav-menu ul li:last-child {
         padding-left: 12px;
@@ -161,9 +173,11 @@ nav {
         z-index: 1000; }
         #slider .slide-container .slide .slide-overlay h1 {
           font-weight: 700;
-          text-transform: uppercase; }
+          text-transform: uppercase;
+          text-shadow: #666666 1px 1px 1px; }
         #slider .slide-container .slide .slide-overlay h4 {
-          line-height: 27px; }
+          line-height: 27px;
+          text-shadow: #666666 1px 1px 1px; }
         #slider .slide-container .slide .slide-overlay small {
           color: inherit; }
         #slider .slide-container .slide .slide-overlay strong {
@@ -191,7 +205,8 @@ nav {
         float: left;
         cursor: pointer; }
         #slider .slider-nav ul li i {
-          color: #ffffff; }
+          color: #ffffff;
+          text-shadow: #666666 1px 1px 1px; }
 
 #call-to-action {
   background: #f6a500 url("../../assets/images/call-to-action-background.png");
@@ -211,12 +226,14 @@ nav {
   padding-bottom: 50px; }
   #home-layout #services-container .services-row .row {
     margin-top: 50px; }
-  #home-layout #services-container .services-row .thumb {
+  #home-layout #services-container .services-row .service p {
+    line-height: 24px; }
+  #home-layout #services-container .services-row .service .thumb {
     width: 100%;
     height: 150px;
     margin-bottom: 30px;
     overflow: hidden; }
-    #home-layout #services-container .services-row .thumb img {
+    #home-layout #services-container .services-row .service .thumb img {
       width: 100%;
       height: auto; }
 #home-layout #testimonial-container {
@@ -365,6 +382,8 @@ nav {
     padding-right: 0; }
   #contact .content {
     max-width: 600px; }
+    #contact .content p {
+      line-height: 24px; }
   #contact .form {
     margin-top: 50px; }
     #contact .form .form-control {
@@ -452,7 +471,10 @@ nav {
   padding-top: 50px;
   padding-bottom: 50px; }
   #single-projecten .single-projecten-text h1 {
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-weight: 600; }
+  #single-projecten .single-projecten-text p {
+    line-height: 24px; }
   #single-projecten .single-projecten-text .project-info {
     margin-top: 30px; }
     #single-projecten .single-projecten-text .project-info td {

@@ -5,6 +5,47 @@
  */
 
 $(document).ready(function(){
+    /*
+    |-------------------------------------------------------------------------------------------------------------------
+    |   Set Mobile Device Classes.
+    |-------------------------------------------------------------------------------------------------------------------
+    */
+    var deviceAgent = navigator.userAgent.toLowerCase();
+
+    if (deviceAgent.match(/(iphone|ipod|ipad)/)) {
+        html.addClass('ios');
+        html.addClass('mobile');
+    }
+
+    if (deviceAgent.match(/(Windows Phone)/i)) {
+        html.addClass('windows');
+        html.addClass('mobile');
+    }
+
+    if (deviceAgent.match(/(iemobile)/i)) {
+        html.addClass('iemobile');
+        html.addClass('mobile');
+    }
+
+    if (deviceAgent.match(/android/)) {
+        html.addClass('android');
+        html.addClass('mobile');
+    }
+
+    if (deviceAgent.match(/blackberry/)) {
+        html.addClass('blackberry');
+        html.addClass('mobile');
+    }
+
+    if (deviceAgent.match(/(symbianos|^sonyericsson|^nokia|^samsung|^lg)/)) {
+        html.addClass('mobile');
+    }
+
+    /*
+    |-------------------------------------------------------------------------------------------------------------------
+    |   Lightbox Functionality.
+    |-------------------------------------------------------------------------------------------------------------------
+    */
     var lightbox = $('#lightbox');
 
     // Lightbox function
@@ -26,8 +67,11 @@ $(document).ready(function(){
         lightbox.fadeOut();
     });
 
-
-    // About us Services function
+    /*
+    |-------------------------------------------------------------------------------------------------------------------
+    |   About us Services Function.
+    |-------------------------------------------------------------------------------------------------------------------
+    */
     $('.services-nav-item').click(function(){
         // Remove all the active classes on the nav items
         $('.services-nav-item').removeClass('active');
@@ -46,6 +90,5 @@ $(document).ready(function(){
 
         return false;
     });
-
 
 });

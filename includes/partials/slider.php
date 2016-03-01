@@ -11,20 +11,20 @@
         <?php
         $i = 0;
 
-        if(have_rows('slider')){
-            while(have_rows('slider')) : the_row();
+        if(have_rows('slider', 'option')){
+            while(have_rows('slider', 'option')) : the_row();
                 ?>
                 <li class="slide" style="background-image: url(<?php the_sub_field('image'); ?>)">
 
                     <div class="slide-overlay container-capped">
 
                         <div class="middle-wrap">
-                            <h1><?php the_sub_field('title'); ?></h1>
-                            <h4><?php echo get_sub_field('text'); ?></h4>
+                            <h1><?php the_sub_field('title', 'option'); ?></h1>
+                            <h4><?php echo get_sub_field('text', 'option'); ?></h4>
 
                             <?php
-                            if(get_sub_field('link_url')){
-                                echo '<a class="button" href="'.get_sub_field('link_url').'">'.get_sub_field('link_name').'</a>';
+                            if(get_sub_field('link_url', 'option')){
+                                echo '<a class="button" href="'.get_sub_field('link_url', 'option').'">'.get_sub_field('link_name', 'option').'</a>';
                             }
                             ?>
                         </div>
@@ -32,9 +32,9 @@
                     </div>
 
                     <?php
-                    if(get_sub_field('overlay_active')){
-                        $overlay_color      = get_sub_field('overlay_color');
-                        $overlay_opacity    = get_sub_field('overlay_opacity') / 100;
+                    if(get_sub_field('overlay_active', 'option')){
+                        $overlay_color      = get_sub_field('overlay_color', 'option');
+                        $overlay_opacity    = get_sub_field('overlay_opacity', 'option') / 100;
 
                         echo '<div class="image-darken" style="background-color: '.$overlay_color.'; opacity: '.$overlay_opacity.'"></div>';
                     }

@@ -1,6 +1,4 @@
 <?php
-/* Template Name: Projects */
-
 /**
  * Created by:  Tim van der Slik
  * Project:     Kas Bouw
@@ -16,7 +14,6 @@ get_template_part('header');
 
 get_template_part('includes/partials/slider');
 ?>
-
 <div id="projects" class="container-fluid container-capped">
     <div class="title">
         <h1>Projecten</h1>
@@ -128,7 +125,6 @@ get_template_part('includes/partials/slider');
     wp_reset_postdata();
     ?>
 </div><!-- Projects closing tag -->
-
 <?php
 /*
 |----------------------------------------------------------------
