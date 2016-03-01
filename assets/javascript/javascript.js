@@ -1,5 +1,7 @@
 /**
- * Created by Tim on 2/29/2016.
+ * Created by:  Tim van der Slik
+ * Project:     Kas Bouw
+ * Website:     http://media-critics.nl
  */
 
 $(document).ready(function(){
