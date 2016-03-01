@@ -25,6 +25,7 @@
   padding: 8px 20px; }
 
 .button:hover {
+  color: #ffffff;
   background: #2C353D;
   text-decoration: none; }
 
@@ -161,6 +162,15 @@ nav {
         #slider .slide-container .slide .slide-overlay h1 {
           font-weight: 700;
           text-transform: uppercase; }
+        #slider .slide-container .slide .slide-overlay h4 {
+          line-height: 27px; }
+        #slider .slide-container .slide .slide-overlay small {
+          color: inherit; }
+        #slider .slide-container .slide .slide-overlay strong {
+          color: inherit; }
+        #slider .slide-container .slide .slide-overlay .button {
+          display: inline-block;
+          margin-top: 20px; }
       #slider .slide-container .slide .image-darken {
         position: absolute;
         width: 100%;

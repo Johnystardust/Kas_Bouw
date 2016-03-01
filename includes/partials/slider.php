@@ -20,12 +20,25 @@
 
                         <div class="middle-wrap">
                             <h1><?php the_sub_field('title'); ?></h1>
-                            <?php the_sub_field('text'); ?>
+                            <h4><?php echo get_sub_field('text'); ?></h4>
+
+                            <?php
+                            if(get_sub_field('link_url')){
+                                echo '<a class="button" href="'.get_sub_field('link_url').'">'.get_sub_field('link_name').'</a>';
+                            }
+                            ?>
                         </div>
 
                     </div>
 
-                    <div class="image-darken"></div>
+                    <?php
+                    if(get_sub_field('overlay_active')){
+                        $overlay_color      = get_sub_field('overlay_color');
+                        $overlay_opacity    = get_sub_field('overlay_opacity') / 100;
+
+                        echo '<div class="image-darken" style="background-color: '.$overlay_color.'; opacity: '.$overlay_opacity.'"></div>';
+                    }
+                    ?>
                 </li>
                 <?php
                 $i++;
