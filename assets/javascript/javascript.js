@@ -2,9 +2,8 @@
  * Created by Tim on 2/29/2016.
  */
 
-var lightbox = $('#lightbox');
-
 $(document).ready(function(){
+    var lightbox = $('#lightbox');
 
     // Lightbox function
     lightbox.hide();

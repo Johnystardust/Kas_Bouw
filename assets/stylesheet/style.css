@@ -19,9 +19,14 @@
 
 .button {
   color: #ffffff;
-  border: 1px solid #ffffff;
+  background: #f6a500;
+  border: none;
   border-radius: 20px;
   padding: 8px 20px; }
+
+.button:hover {
+  background: #2C353D;
+  text-decoration: none; }
 
 .divider hr {
   max-width: 70px;
@@ -62,6 +67,18 @@ h5 {
   font-family: "Raleway", sans-serif; }
 
 p {
+  font-family: "Raleway", sans-serif; }
+
+span {
+  font-family: "Raleway", sans-serif; }
+
+small {
+  font-family: "Raleway", sans-serif; }
+
+strong {
+  font-family: "Raleway", sans-serif; }
+
+a {
   font-family: "Raleway", sans-serif; }
 
 #lightbox {
@@ -168,7 +185,7 @@ nav {
 #home-layout #testimonial-container {
   padding-top: 50px;
   padding-bottom: 50px;
-  background-color: #F6F6F6; }
+  background-color: #F3F3F3; }
   #home-layout #testimonial-container .testimonial-row .testimonial-item {
     text-align: center; }
     #home-layout #testimonial-container .testimonial-row .testimonial-item .testimonial-item-inner {
@@ -301,6 +318,24 @@ nav {
         #about-us .row-services .services-inner .services-text p {
           line-height: 26px; }
 
+#contact {
+  background: #F3F3F3;
+  padding-top: 50px;
+  padding-bottom: 50px; }
+  #contact .left {
+    padding-left: 0; }
+  #contact .right {
+    padding-right: 0; }
+  #contact .content {
+    max-width: 600px; }
+  #contact .form {
+    margin-top: 50px; }
+    #contact .form .form-control {
+      border-radius: 0;
+      border: none !important; }
+    #contact .form textarea {
+      resize: vertical; }
+
 #single-projecten {
   padding-top: 50px;
   padding-bottom: 50px; }
@@ -373,16 +408,8 @@ nav {
     #single-projecten .posts-nav .previous-post-link i:before {
       text-align: left;
       margin-left: 0; }
-    #single-projecten .posts-nav a {
-      color: #ffffff;
-      background: #f6a500;
-      border-radius: 20px;
-      padding: 8px 20px; }
-      #single-projecten .posts-nav a i {
-        font-size: 11px; }
-    #single-projecten .posts-nav a:hover {
-      background: #2C353D;
-      text-decoration: none; }
+    #single-projecten .posts-nav .button i {
+      font-size: 11px; }
 
 footer {
   padding-top: 50px;

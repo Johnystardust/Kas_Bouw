@@ -1,6 +1,6 @@
 // Variables
 $yellow     : #f6a500
-$light-grey : #F6F6F6
+$light-grey : #F3F3F3
 
 // Miscellaneous
 .container-capped
@@ -26,9 +26,13 @@ $light-grey : #F6F6F6
 // Button
 .button
   color: #ffffff
-  border: 1px solid #ffffff
+  background: $yellow
+  border: none
   border-radius: 20px
   padding: 8px 20px
+.button:hover
+  background: #2C353D
+  text-decoration: none
 
 .divider
   hr
@@ -59,6 +63,7 @@ $light-grey : #F6F6F6
 
 @import "parts/template-home"
 @import "parts/template-about-us"
+@import "parts/template-contact"
 
 @import "parts/single-projecten"
 

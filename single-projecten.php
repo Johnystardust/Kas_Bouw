@@ -120,7 +120,7 @@ get_template_part('header');
         <div class="col-md-2 previous-post-link">
             <?php
             if($previous_adjacent_post){
-                echo '<a href="'.$prev_permalink.'"><i class="icon icon-left-open"></i>Vorige</a>';
+                echo '<a class="button" href="'.$prev_permalink.'"><i class="icon icon-left-open"></i>Vorige</a>';
             }
             ?>
         </div>
@@ -128,7 +128,7 @@ get_template_part('header');
         <div class="col-md-2 col-md-offset-8 next-post-link">
             <?php
             if($next_adjacent_post){
-                echo '<a href="'.$next_permalink.'">Volgende<i class="icon icon-right-open"></i></a>';
+                echo '<a class="button" href="'.$next_permalink.'">Volgende<i class="icon icon-right-open"></i></a>';
             }
             ?>
         </div>
