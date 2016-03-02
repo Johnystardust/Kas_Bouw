@@ -35,6 +35,11 @@
   background: #2C353D;
   text-decoration: none; }
 
+.button:focus {
+  color: #ffffff;
+  background: #2C353D;
+  text-decoration: none; }
+
 .divider hr {
   max-width: 70px;
   border-color: #f6a500;
@@ -354,6 +359,11 @@ nav {
     display: block; }
   #home-layout #recent-projects-container .recent-projects-row .project:hover .project-overlay-inner .category {
     top: 0; }
+  #home-layout #recent-projects-container .link-to-projects {
+    text-align: center;
+    margin-top: 30px; }
+    #home-layout #recent-projects-container .link-to-projects .button {
+      display: inline-block; }
 
 #about-us {
   padding-top: 50px;
@@ -588,7 +598,8 @@ footer {
     margin: 0;
     border-color: #999999; }
   footer .textwidget {
-    margin-top: 20px; }
+    margin-top: 20px;
+    font-family: "Raleway", sans-serif; }
   footer ul {
     margin-top: 20px;
     list-style-type: none; }
@@ -600,7 +611,8 @@ footer {
         text-decoration: none;
         color: #f6a500; }
       footer ul li a:focus {
-        text-decoration: none; }
+        text-decoration: none;
+        color: #f6a500; }
     footer ul li:first-child {
       margin-top: 0; }
 

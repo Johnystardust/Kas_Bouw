@@ -134,6 +134,8 @@ get_template_part('includes/partials/slider');
 
         <div class="row recent-projects-row">
             <?php
+            $x = 0;
+
             /*
             |----------------------------------------------------------------
             |   WP_Query.
@@ -187,6 +189,7 @@ get_template_part('includes/partials/slider');
                         </div>
                     </a>
                 <?php
+                $x++;
                 endwhile;
             }
 
@@ -207,6 +210,18 @@ get_template_part('includes/partials/slider');
             wp_reset_postdata();
             ?>
         </div><!-- Recent Projects Row closing tag -->
+
+        <?php
+        /*
+        |----------------------------------------------------------------
+        |   If there are 3 posts displayed show the all projects button.
+        |----------------------------------------------------------------
+        */
+        if($x == 3){
+            echo '<div class="link-to-projects"><a href="'.home_url().'/projecten/" class="button">Alle Projecten</a></div>';
+        }
+        ?>
+
     </div><!-- Recent Projects Container closing tag -->
 
     <!-- Call To Action-->
