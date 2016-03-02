@@ -21,6 +21,12 @@
 </head>
 
 <body>
+    <!-- Preloader -->
+    <?php get_template_part('includes/partials/preloader'); ?>
+
+    <!-- Preloader -->
+    <?php get_template_part('includes/partials/go-to-top'); ?>
+
 
     <nav id="main-nav" class="container-fluid container-capped">
 
