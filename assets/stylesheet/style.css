@@ -24,7 +24,11 @@
   border-radius: 20px;
   padding: 8px 20px;
   text-transform: uppercase;
-  font-size: 13px; }
+  font-size: 13px;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out; }
 
 .button:hover {
   color: #ffffff;
@@ -106,19 +110,31 @@ td {
 
 nav {
   height: 80px;
+  width: 100%;
+  position: fixed;
   background-color: #ffffff;
   font-family: "Raleway", sans-serif;
-  font-size: 13px; }
+  font-size: 13px;
+  z-index: 1000000;
+  top: 0;
+  border-bottom: 1px solid #D9D9D9;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out; }
   nav .nav-logo {
     float: left;
-    height: 80px;
+    height: 100%;
     padding: 10px 0; }
     nav .nav-logo a {
       display: block;
       height: 100%; }
       nav .nav-logo a img {
-        height: 100%;
-        width: auto; }
+        height: 59px;
+        transition: all 0.3s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out; }
   nav .nav-menu {
     float: right; }
     nav .nav-menu ul {
@@ -131,7 +147,11 @@ nav {
           text-transform: uppercase;
           color: #000000;
           font-size: 14px;
-          font-weight: 500; }
+          font-weight: 500;
+          transition: all 0.3s ease-in-out;
+          -webkit-transition: all 0.3s ease-in-out;
+          -moz-transition: all 0.3s ease-in-out;
+          -o-transition: all 0.3s ease-in-out; }
         nav .nav-menu ul li a:hover {
           color: #f6a500 !important;
           text-decoration: none; }
@@ -143,10 +163,19 @@ nav {
         padding-left: 12px;
         padding-right: 0; }
 
+.menu-close {
+  height: 60px !important; }
+  .menu-close .nav-logo a img {
+    height: 39px;
+    width: auto !important; }
+  .menu-close .nav-menu ul li a {
+    line-height: 60px !important; }
+
 #slider {
   position: relative;
   height: 450px;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-top: 80px; }
   #slider .slide-container {
     margin-left: 0;
     height: 100%;
@@ -219,7 +248,12 @@ nav {
     color: #ffffff;
     line-height: 23px; }
   #call-to-action .button {
-    float: right; }
+    float: right;
+    background: transparent;
+    border: 1px solid #ffffff; }
+  #call-to-action .button:hover {
+    border-color: #2C353D;
+    color: #2C353D; }
 
 #home-layout #services-container {
   padding-top: 50px;
