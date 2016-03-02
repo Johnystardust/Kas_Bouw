@@ -7,36 +7,7 @@
 ?>
 <footer class="container-fluid container-capped">
     <div class="row">
-        <div class="col-md-3">
-            <hr/>
-            <h5>Kas Bouw & Timmerwerken</h5>
-            <hr/>
-
-            <ul>
-                <li><a href="#">Over ons</a></li>
-                <li><a href="#">Projecten</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
-
-        <div class="col-md-3">
-            <hr/>
-            <h5>Specialisaties</h5>
-            <hr/>
-
-            <ul>
-                <li><a href="#">Nieuwbouw & verbouw</a></li>
-                <li><a href="#">Onderhoud en renovatie</a></li>
-                <li><a href="#">Veranda's & luxe bijgebouwen</a></li>
-                <li><a href="#">Dakkapellen</a></li>
-            </ul>
-        </div>
-
-        <div class="col-md-3">
-            <hr/>
-            <h5>Projecten</h5>
-            <hr/>
-        </div>
+        <?php dynamic_sidebar('footer'); ?>
 
         <div class="col-md-3">
             <hr/>

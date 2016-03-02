@@ -553,6 +553,8 @@ footer {
   footer hr {
     margin: 0;
     border-color: #999999; }
+  footer .textwidget {
+    margin-top: 20px; }
   footer ul {
     margin-top: 20px;
     list-style-type: none; }
@@ -560,6 +562,11 @@ footer {
       margin-top: 7px; }
       footer ul li a {
         color: #ffffff; }
+      footer ul li a:hover {
+        text-decoration: none;
+        color: #f6a500; }
+      footer ul li a:focus {
+        text-decoration: none; }
     footer ul li:first-child {
       margin-top: 0; }
 
