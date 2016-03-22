@@ -12,7 +12,17 @@
     <meta charset="UTF-8">
     <meta name=viewport content="width=device-width, initial-scale=1">
 
-    <title>Kas Bouw | <?php echo get_the_title(); ?></title>
+    <title>
+        Kas Bouw |
+        <?php
+        if(is_archive()){
+            if(get_post_type() == 'projecten'){echo 'Projecten';}
+        }
+        else {
+            the_title();
+        }
+        ?>
+    </title>
 
     <!-- Enqueue all the styles & scripts -->
     <?php wp_head(); ?>
@@ -35,6 +45,13 @@
         </div>
 
         <div class="nav-menu">
+            <div class="menu-icon-wrapper">
+                <div class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
             <?php
             $args = array(
                 'theme_location'  => 'main-menu',
@@ -42,7 +59,7 @@
                 'container'       => '',
                 'container_class' => '',
                 'container_id'    => '',
-                'menu_class'      => 'menu',
+                'menu_class'      => 'menu-container',
                 'menu_id'         => '',
                 'echo'            => true,
                 'fallback_cb'     => 'wp_page_menu',

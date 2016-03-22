@@ -105,7 +105,7 @@ get_template_part('includes/partials/slider');
                 }
                 ?>
 
-                <div class="col-md-4 services-nav">
+                <div class="col-md-4 col-sm-12 services-nav">
                     <ul>
                         <?php
                         $o = 0;
@@ -120,7 +120,7 @@ get_template_part('includes/partials/slider');
                     </ul>
                 </div>
 
-                <div class="col-md-8 services-text">
+                <div class="col-md-8 col-sm-12 services-text">
                     <?php
                     $p = 0;
 

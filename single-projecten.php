@@ -100,7 +100,7 @@ get_template_part('includes/partials/slider');
     ?>
 
     <div class="row posts-nav">
-        <div class="col-md-2 previous-post-link">
+        <div class="col-md-2 col-xs-6 previous-post-link">
             <?php
             if($previous_adjacent_post){
                 echo '<a class="button" href="'.$prev_permalink.'"><i class="icon icon-left-open"></i>Vorige</a>';
@@ -108,7 +108,7 @@ get_template_part('includes/partials/slider');
             ?>
         </div>
 
-        <div class="col-md-2 col-md-offset-8 next-post-link">
+        <div class="col-md-2 col-md-offset-8 col-xs-6 next-post-link">
             <?php
             if($next_adjacent_post){
                 echo '<a class="button" href="'.$next_permalink.'">Volgende<i class="icon icon-right-open"></i></a>';

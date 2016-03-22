@@ -20,6 +20,7 @@ get_template_part('includes/partials/slider');
         <div class="divider"><hr/></div>
     </div>
 
+    <div class="row">
     <?php
     /*
     |----------------------------------------------------------------
@@ -48,12 +49,12 @@ get_template_part('includes/partials/slider');
             |   Place opening row div.
             |----------------------------------------------------------------
             */
-            if($i%3==0){
-                echo '<div class="row">';
-            }
-            ?>
+//            if($i%3==0){
+//                echo '<div class="row">';
+//            }
+//            ?>
             <a href="<?php the_permalink(); ?>">
-                <div class="col-md-4 project">
+                <div class="col-md-4 col-sm-6 col-xs-12 project">
                     <div class="project-inner">
 
                         <div class="project-overlay">
@@ -75,12 +76,26 @@ get_template_part('includes/partials/slider');
                             </div>
 
                             <div class="project-overlay-color"></div>
-
                         </div>
+
                         <?php if(has_post_thumbnail()){
                             the_post_thumbnail();
                         }
                         ?>
+
+                        <div class="mobile-description">
+                            <h4><?php the_title(); ?></h4>
+                            <div class="category">
+                                <?php
+                                $categories = get_the_category();
+
+                                foreach($categories as $category){
+                                    echo '<span>'.esc_html($category->name).'</span>';
+                                }
+                                ?>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </a>
@@ -92,9 +107,9 @@ get_template_part('includes/partials/slider');
             |   Place closing row div.
             |----------------------------------------------------------------
             */
-            if($i%3==0){
-                echo '</div>';
-            }
+//            if($i%3==0){
+//                echo '</div>';
+//            }
         endwhile;
 
         /*
@@ -103,9 +118,9 @@ get_template_part('includes/partials/slider');
         |   closed.
         |----------------------------------------------------------------
         */
-        if($i%3!=0){
-            echo '</div>';
-        }
+//        if($i%3!=0){
+//            echo '</div>';
+//        }
     }
 
     /*
@@ -124,6 +139,7 @@ get_template_part('includes/partials/slider');
     */
     wp_reset_postdata();
     ?>
+    </div><!-- Row closing tag -->
 </div><!-- Projects closing tag -->
 <?php
 /*

@@ -1,0 +1,211 @@
+.mobile
+
+  // Projecten archive page remove hover effect on mobile and replace
+  .mobile-description
+    display: block !important
+  .project-overlay
+    display: none !important
+
+//-------------------------------------------------------------------------------------------------------//
+//  Telephone and very small screens
+//-------------------------------------------------------------------------------------------------------//
+@media screen and (max-width: 768px)
+
+  .mobile
+    .slide-overlay
+      h4
+        display: none
+
+//-------------------------------------------------------------------------------------------------------//
+//  iPad Portrait mode and small screens
+//-------------------------------------------------------------------------------------------------------//
+@media screen and (max-width: 992px)
+
+  // Change the padding along the sides
+  .container-capped
+    padding-left: 30px !important
+    padding-right: 30px !important
+
+  // Footer
+  footer
+    .col-md-3
+      margin-top: 30px
+    .col-md-3:first-child
+      margin-top: 0
+
+  // Home Services
+  .services-row
+    .row
+      .service:first-child
+        margin-top: 0
+      .service
+        margin-top: 50px
+  // Home Testimonial
+  .testimonial-container
+
+  // Home Recent Projects
+  #recent-projects-container
+    .recent-projects-row
+      a:first-child
+        margin-top: 0
+      a
+        margin-top: 30px
+        display: block
+
+
+  // Contact form name & email input fields
+  #contact
+    .left
+      padding-right: 0 !important
+
+    .right
+      padding-left: 0 !important
+
+//-------------------------------------------------------------------------------------------------------//
+//  iPad Landscape mode and small screens
+//-------------------------------------------------------------------------------------------------------//
+@media screen and (max-width: 1024px)
+  .single-projecten-images
+    margin-top: 30px
+
+  // Contact
+  #contact
+    .content
+      max-width: none !important
+    .sidebar
+      margin-top: 50px
+
+  // Main Menu
+  #main-nav
+
+    .menu-container
+      position: absolute
+      left: 0
+      width: 100%
+      background-color: #333333
+      max-height: 0
+      overflow: hidden
+      -webkit-transition: all 0.3s ease-in-out
+      -moz-transition: all 0.3s ease-in-out
+      -o-transition: all 0.3s ease-in-out
+      transition: all 0.3s ease-in-out
+      li
+        float: none !important
+        padding: 0 !important
+        border-top: 1px solid rgba(255, 255, 255, 0.1)
+        border-bottom: 1px solid rgba(0,0,0,0.3)
+        -webkit-transition: all 0.3s ease-in-out
+        -moz-transition: all 0.3s ease-in-out
+        -o-transition: all 0.3s ease-in-out
+        transition: all 0.3s ease-in-out
+        a
+          width: 100%
+          padding: 0 30px
+          display: block
+          line-height: 60px !important
+          color: #ffffff
+          i
+            float: right
+            transform: rotate(0deg)
+            -webkit-transform: rotate(0deg)
+            -moz-transform: rotate(0deg)
+            -o-transform: rotate(0deg)
+            -webkit-transition: all 0.3s ease-in-out
+            -moz-transition: all 0.3s ease-in-out
+            -o-transition: all 0.3s ease-in-out
+            transition: all 0.3s ease-in-out
+          .icon-submenu-clicked
+            transform: rotate(180deg) !important
+            -webkit-transform: rotate(180deg) !important
+            -moz-transform: rotate(180deg) !important
+            -o-transform: rotate(180deg) !important
+
+        .sub-menu
+          border-top: none !important
+          max-height: 0
+          display: block !important
+          background-color: #444444
+          color: #ffffff
+          overflow: hidden
+          position: relative !important
+          margin-left: 0
+          margin-top: 0
+          -webkit-transition: all 0.3s ease-in-out
+          -moz-transition: all 0.3s ease-in-out
+          -o-transition: all 0.3s ease-in-out
+          transition: all 0.3s ease-in-out
+          li
+            background-color: #444444
+        .sub-menu-open
+          max-height: 1000px
+
+      li:hover
+        background-color: $yellow !important
+        a
+          color: #ffffff !important
+        .current_page_item, .current-menu-item
+          a
+            color: $yellow !important
+          .sub-menu
+            a
+              color: #ffffff !important
+        .current_page_item:hover, .current-menu-item:hover
+          a
+            color: #ffffff !important
+
+
+    .menu-container-open
+      max-height: 1000px !important
+
+    // Icon Wrapper
+    .menu-icon-wrapper
+      height: 80px
+      .menu-icon
+        cursor: pointer
+        height: 22px
+        width: 32px
+        position: relative
+        top: 29px
+        span
+          display: block
+          position: absolute
+          width: 32px
+          height: 4px
+          border-radius: 9px
+          -webkit-transform: rotate(0deg)
+          -moz-transform: rotate(0deg)
+          -o-transform: rotate(0deg)
+          transform: rotate(0deg)
+          -webkit-transition: .3s ease-in-out
+          -moz-transition: .3s ease-in-out
+          -o-transition: .3s ease-in-out
+          transition: .3s ease-in-out
+          background-color: #000000
+        span:nth-child(1)
+          top: 0
+
+        span:nth-child(2)
+          top: 9px
+          left: 0
+
+        span:nth-child(3)
+          top: 18px
+
+      .open
+        span:nth-child(1)
+          top: 9px
+          -webkit-transform: rotate(135deg)
+          -moz-transform: rotate(135deg)
+          -o-transform: rotate(135deg)
+          transform: rotate(135deg)
+
+        span:nth-child(2)
+          opacity: 0
+          left: -60px
+
+        span:nth-child(3)
+          top: 9px
+          -webkit-transform: rotate(-135deg)
+          -moz-transform: rotate(-135deg)
+          -o-transform: rotate(-135deg)
+          transform: rotate(-135deg)

@@ -20,8 +20,13 @@ get_template_part('includes/partials/slider');
 <div id="home-layout">
     <!-- Call To Action-->
     <div id="call-to-action" class="container-fluid container-capped">
-        <h5><?php the_field('call_to_action_text'); ?></h5>
-        <a class="button" href="<?php the_field('button_link'); ?>"><?php the_field('button_text'); ?></a>
+        <div class="text-wrap">
+            <h4><?php the_field('call_to_action_text'); ?></h4>
+        </div>
+
+        <div class="button-wrap">
+            <a class="button" href="<?php the_field('button_link'); ?>"><?php the_field('button_text'); ?></a>
+        </div>
     </div><!-- Call to Action closing tag -->
 
     <!-- Services Container -->
@@ -107,7 +112,7 @@ get_template_part('includes/partials/slider');
                     $function   = get_sub_field('function');
 
                     ?>
-                    <div class="col-md-6 testimonial-item">
+                    <div class="col-md-6 col-sm-6 testimonial-item">
                         <div class="testimonial-item-inner">
                             <div class="quote-img"><img src="<?php echo get_stylesheet_directory_uri().'/assets/images/quote-image.png'; ?>" /></div>
                             <p>
@@ -226,8 +231,13 @@ get_template_part('includes/partials/slider');
 
     <!-- Call To Action-->
     <div id="call-to-action" class="container-fluid container-capped">
-        <h5><?php the_field('call_to_action_2_text'); ?></h5>
-        <a class="button" href="<?php the_field('button_2_link'); ?>"><?php the_field('button_2_text'); ?></a>
+        <div class="text-wrap">
+            <h4><?php the_field('call_to_action_2_text'); ?></h4>
+        </div>
+
+        <div class="button-wrap">
+            <a class="button" href="<?php the_field('button_2_link'); ?>"><?php the_field('button_2_text'); ?></a>
+        </div>
     </div><!-- Call to Action closing tag -->
 
 </div><!-- Home Layout closing tag -->

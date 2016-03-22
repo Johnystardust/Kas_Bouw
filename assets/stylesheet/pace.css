@@ -72,7 +72,7 @@
 .pace .pace-progress:after {
   content: attr(data-progress-text);
   display: inline-block;
-  position: fixed;
+  position: absolute;
   width: 45px;
   text-align: right;
   right: 0;

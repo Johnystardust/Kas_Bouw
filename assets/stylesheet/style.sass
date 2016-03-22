@@ -3,6 +3,11 @@ $yellow     : #f6a500
 $light-grey : #F3F3F3
 
 // Miscellaneous
+html
+  height: 100%
+body
+  height: 100%
+
 .container-capped
   padding-left: 60px
   padding-right: 60px
@@ -90,6 +95,7 @@ $light-grey : #F3F3F3
   bottom: 20px
   width: 30px
   height: 30px
+  z-index: 1000000
   background-color: $yellow
   border-radius: 4px
   cursor: pointer
@@ -105,15 +111,20 @@ $light-grey : #F3F3F3
     display: table-cell
     vertical-align: middle
     top: 0
-    transition: all 0.3s ease-in-out
-    -webkit-transition: all 0.3s ease-in-out
-    -moz-transition: all 0.3s ease-in-out
-    -o-transition: all 0.3s ease-in-out
+    transition: all 0.1s ease-in-out
+    -webkit-transition: all 0.1s ease-in-out
+    -moz-transition: all 0.1s ease-in-out
+    -o-transition: all 0.1s ease-in-out
 #go-to-top:hover
   background-color: #2C353D
   i
     color: #ffffff
     top: -3px
+#go-to-top:focus
+  background-color: $yellow
+  i
+    color: #ffffff
+
 
 @import "parts/reset"
 @import "parts/typography"
@@ -128,7 +139,8 @@ $light-grey : #F3F3F3
 @import "parts/template-about-us"
 @import "parts/template-contact"
 @import "parts/template-projects"
-
 @import "parts/single-projecten"
 
 @import "parts/footer"
+
+@import "parts/mobile"
