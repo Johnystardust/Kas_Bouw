@@ -162,7 +162,7 @@ get_template_part('includes/partials/slider');
                 while ($the_query->have_posts()): $the_query->the_post();
                     ?>
                     <a href="<?php the_permalink(); ?>">
-                        <div class="col-md-4 project">
+                        <div class="col-md-4 col-sm-4 project">
                             <div class="project-inner">
 
                                 <div class="project-overlay">
@@ -190,6 +190,19 @@ get_template_part('includes/partials/slider');
                                     the_post_thumbnail();
                                 }
                                 ?>
+
+                                <div class="mobile-description">
+                                    <h4><?php the_title(); ?></h4>
+                                    <div class="category">
+                                        <?php
+                                        $categories = get_the_category();
+
+                                        foreach($categories as $category){
+                                            echo '<span>'.esc_html($category->name).'</span>';
+                                        }
+                                        ?>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </a>

@@ -17,8 +17,8 @@
             <ul>
                 <li>Kraaikoplaan 12</li>
                 <li>3772 PH  Barneveld</li>
-                <li>06 247 325 87</li>
-                <li>info@kasbouwentimmerwerken.nl</li>
+                <li><a href="tel:+06 247 325 87"></a>06 247 325 87</li>
+                <li><a href="mailto:info@kasbouwentimmerwerken.nl">info@kasbouwentimmerwerken.nl</a></li>
             </ul>
         </div>
 

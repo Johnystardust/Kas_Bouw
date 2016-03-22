@@ -371,12 +371,14 @@ nav {
     line-height: 24px; }
   #home-layout #services-container .services-row .service .thumb {
     width: 100%;
-    height: 150px;
+    height: auto;
     margin-bottom: 30px;
     overflow: hidden; }
     #home-layout #services-container .services-row .service .thumb img {
       width: 100%;
       height: auto; }
+  #home-layout #services-container .services-row .service .content .divider hr {
+    text-align: left; }
 #home-layout #testimonial-container {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -457,6 +459,11 @@ nav {
     #home-layout #recent-projects-container .recent-projects-row .project img {
       width: 100%;
       height: auto; }
+  #home-layout #recent-projects-container .recent-projects-row .mobile-description {
+    color: #000000;
+    display: none; }
+    #home-layout #recent-projects-container .recent-projects-row .mobile-description h3 {
+      margin-top: 10px; }
   #home-layout #recent-projects-container .recent-projects-row .project:hover .project-overlay-color {
     opacity: 0.7; }
   #home-layout #recent-projects-container .recent-projects-row .project:hover .project-overlay-inner h3 {
@@ -480,12 +487,14 @@ nav {
     margin-top: 0; }
   #about-us .row-about .thumb {
     width: 100%;
-    height: 150px;
+    height: auto;
     margin-bottom: 30px;
     overflow: hidden; }
     #about-us .row-about .thumb img {
       width: 100%;
       height: auto; }
+  #about-us .row-about .content .divider hr {
+    text-align: left; }
   #about-us .row-services {
     margin-top: 100px; }
     #about-us .row-services .services-inner {
@@ -534,6 +543,8 @@ nav {
     max-width: 600px; }
     #contact .content p {
       line-height: 24px; }
+    #contact .content .divider hr {
+      text-align: left; }
   #contact .form {
     margin-top: 50px; }
     #contact .form .form-control {
@@ -633,6 +644,8 @@ nav {
     font-weight: 600; }
   #single-projecten .single-projecten-text p {
     line-height: 24px; }
+  #single-projecten .single-projecten-text .divider hr {
+    text-align: left; }
   #single-projecten .single-projecten-text .project-info {
     margin-top: 30px; }
     #single-projecten .single-projecten-text .project-info td {
@@ -735,9 +748,40 @@ footer {
 .mobile .project-overlay {
   display: none !important; }
 
+@media screen and (max-width: 767px) {
+  #recent-projects-container .recent-projects-row a:first-child {
+    margin-top: 0; }
+  #recent-projects-container .recent-projects-row a {
+    margin-top: 30px;
+    display: block; } }
 @media screen and (max-width: 768px) {
   .mobile .slide-overlay h4 {
-    display: none; } }
+    display: none; }
+
+  #call-to-action .button-wrap {
+    float: none;
+    width: 100%;
+    margin-top: 20px;
+    display: inline-block; }
+    #call-to-action .button-wrap a {
+      text-align: center; }
+
+  #testimonial-container .testimonial-item {
+    margin-top: 20px; }
+  #testimonial-container .testimonial-item:first-child {
+    margin-top: 0; }
+
+  #about-us .services-nav {
+    padding-bottom: 20px;
+    border-right: none !important;
+    border-bottom: 2px solid #ffffff; }
+    #about-us .services-nav ul li {
+      margin-left: 0 !important;
+      margin-top: 10px !important;
+      float: none !important; }
+  #about-us .services-text {
+    margin-top: 20px;
+    padding-left: 15px !important; } }
 @media screen and (max-width: 992px) {
   .container-capped {
     padding-left: 30px !important;
@@ -753,24 +797,36 @@ footer {
   .services-row .row .service {
     margin-top: 50px; }
 
-  #recent-projects-container .recent-projects-row a:first-child {
-    margin-top: 0; }
-  #recent-projects-container .recent-projects-row a {
-    margin-top: 30px;
-    display: block; }
-
   #contact .left {
     padding-right: 0 !important; }
   #contact .right {
-    padding-left: 0 !important; } }
-@media screen and (max-width: 1024px) {
-  .single-projecten-images {
-    margin-top: 30px; }
+    padding-left: 0 !important; }
+
+  #about-us .services-nav {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-bottom: 20px;
+    border-right: none !important;
+    border-bottom: 2px solid #ffffff; }
+    #about-us .services-nav ul li {
+      float: left;
+      margin-top: 0;
+      margin-left: 10px; }
+    #about-us .services-nav ul li:first-child {
+      margin-left: 0; }
+  #about-us .services-text {
+    margin-top: 20px;
+    padding-left: 15px !important; }
 
   #contact .content {
     max-width: none !important; }
   #contact .sidebar {
-    margin-top: 50px; }
+    margin-top: 50px; } }
+@media screen and (max-width: 1024px) {
+  .single-projecten-images {
+    margin-top: 30px; }
 
   #main-nav .menu-container {
     position: absolute;
@@ -888,5 +944,8 @@ footer {
       -moz-transform: rotate(-135deg);
       -o-transform: rotate(-135deg);
       transform: rotate(-135deg); } }
+@media screen and (min-width: 1600px) {
+  #slider {
+    height: 750px !important; } }
 
 /*# sourceMappingURL=style.css.map */

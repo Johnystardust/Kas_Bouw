@@ -6,6 +6,16 @@
   .project-overlay
     display: none !important
 
+@media screen and (max-width: 767px)
+  // Home Recent Projects
+  #recent-projects-container
+    .recent-projects-row
+      a:first-child
+        margin-top: 0
+      a
+        margin-top: 30px
+        display: block
+
 //-------------------------------------------------------------------------------------------------------//
 //  Telephone and very small screens
 //-------------------------------------------------------------------------------------------------------//
@@ -15,6 +25,39 @@
     .slide-overlay
       h4
         display: none
+
+  // Home Action bar
+  #call-to-action
+    .button-wrap
+      float: none
+      width: 100%
+      margin-top: 20px
+      display: inline-block
+      a
+        text-align: center
+
+  // Home Testimonial
+  #testimonial-container
+    .testimonial-item
+      margin-top: 20px
+    .testimonial-item:first-child
+      margin-top: 0
+
+
+  // About us Services
+  #about-us
+    .services-nav
+      padding-bottom: 20px
+      border-right: none !important
+      border-bottom: 2px solid #ffffff
+      ul
+        li
+          margin-left: 0 !important
+          margin-top: 10px !important
+          float: none !important
+    .services-text
+      margin-top: 20px
+      padding-left: 15px !important
 
 //-------------------------------------------------------------------------------------------------------//
 //  iPad Portrait mode and small screens
@@ -40,18 +83,6 @@
         margin-top: 0
       .service
         margin-top: 50px
-  // Home Testimonial
-  .testimonial-container
-
-  // Home Recent Projects
-  #recent-projects-container
-    .recent-projects-row
-      a:first-child
-        margin-top: 0
-      a
-        margin-top: 30px
-        display: block
-
 
   // Contact form name & email input fields
   #contact
@@ -61,12 +92,26 @@
     .right
       padding-left: 0 !important
 
-//-------------------------------------------------------------------------------------------------------//
-//  iPad Landscape mode and small screens
-//-------------------------------------------------------------------------------------------------------//
-@media screen and (max-width: 1024px)
-  .single-projecten-images
-    margin-top: 30px
+  // About us Services
+  #about-us
+    .services-nav
+      padding-left: 0
+      padding-right: 0
+      margin-left: 15px
+      margin-right: 15px
+      padding-bottom: 20px
+      border-right: none !important
+      border-bottom: 2px solid #ffffff
+      ul
+        li
+          float: left
+          margin-top: 0
+          margin-left: 10px
+        li:first-child
+          margin-left: 0
+    .services-text
+      margin-top: 20px
+      padding-left: 15px !important
 
   // Contact
   #contact
@@ -74,6 +119,15 @@
       max-width: none !important
     .sidebar
       margin-top: 50px
+
+
+
+//-------------------------------------------------------------------------------------------------------//
+//  iPad Landscape mode and small screens
+//-------------------------------------------------------------------------------------------------------//
+@media screen and (max-width: 1024px)
+  .single-projecten-images
+    margin-top: 30px
 
   // Main Menu
   #main-nav
@@ -209,3 +263,7 @@
           -moz-transform: rotate(-135deg)
           -o-transform: rotate(-135deg)
           transform: rotate(-135deg)
+
+@media screen and (min-width: 1600px)
+  #slider
+    height: 750px !important
