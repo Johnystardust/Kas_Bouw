@@ -30,19 +30,26 @@
     padding-top: 50px
     padding-bottom: 50px
     background-color: $light-grey
-    .testimonial-row
-      .testimonial-item
-        text-align: center
-        .testimonial-item-inner
-          background-color: #ffffff
-          padding: 30px
-
-        .quote-img
-          margin: 0 auto
-          margin-bottom: 25px
-
-        p
-          margin: 0
+    .carousel-wrapper
+      position: relative
+      overflow: hidden
+      .carousel-container
+        position: absolute
+        top: 0
+        left: 0
+        .carousel-item
+          float: left
+          list-style-type: none
+          padding-left: 15px
+          padding-right: 15px
+          .carousel-item-inner
+            padding: 30px
+            background-color: #ffffff
+            text-align: center
+            p
+              margin: 0
+            .quote-img
+              margin-bottom: 25px
 
   #recent-projects-container
     padding-top: 50px

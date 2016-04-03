@@ -383,16 +383,26 @@ nav {
   padding-top: 50px;
   padding-bottom: 50px;
   background-color: #F3F3F3; }
-  #home-layout #testimonial-container .testimonial-row .testimonial-item {
-    text-align: center; }
-    #home-layout #testimonial-container .testimonial-row .testimonial-item .testimonial-item-inner {
-      background-color: #ffffff;
-      padding: 30px; }
-    #home-layout #testimonial-container .testimonial-row .testimonial-item .quote-img {
-      margin: 0 auto;
-      margin-bottom: 25px; }
-    #home-layout #testimonial-container .testimonial-row .testimonial-item p {
-      margin: 0; }
+  #home-layout #testimonial-container .carousel-wrapper {
+    position: relative;
+    overflow: hidden; }
+    #home-layout #testimonial-container .carousel-wrapper .carousel-container {
+      position: absolute;
+      top: 0;
+      left: 0; }
+      #home-layout #testimonial-container .carousel-wrapper .carousel-container .carousel-item {
+        float: left;
+        list-style-type: none;
+        padding-left: 15px;
+        padding-right: 15px; }
+        #home-layout #testimonial-container .carousel-wrapper .carousel-container .carousel-item .carousel-item-inner {
+          padding: 30px;
+          background-color: #ffffff;
+          text-align: center; }
+          #home-layout #testimonial-container .carousel-wrapper .carousel-container .carousel-item .carousel-item-inner p {
+            margin: 0; }
+          #home-layout #testimonial-container .carousel-wrapper .carousel-container .carousel-item .carousel-item-inner .quote-img {
+            margin-bottom: 25px; }
 #home-layout #recent-projects-container {
   padding-top: 50px;
   padding-bottom: 50px; }

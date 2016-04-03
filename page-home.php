@@ -104,29 +104,30 @@ get_template_part('includes/partials/slider');
         </div>
 
         <div class="row testimonial-row">
-            <?php
-            if(have_rows('testimonial')){
-                while(have_rows('testimonial')) : the_row();
-                    $text       = get_sub_field('text');
-                    $author     = get_sub_field('author');
-                    $function   = get_sub_field('function');
-
+            <div class="carousel-wrapper">
+                <ul class="carousel-container">
+                    <?php
+                    if(have_rows('testimonial')){
+                        while(have_rows('testimonial')) : the_row();
+                                $text       = get_sub_field('text');
+                                $author     = get_sub_field('author');
+                                $function   = get_sub_field('function');
+                            ?>
+                            <li class="carousel-item">
+                                <div class="carousel-item-inner">
+                                    <div class="quote-img"><img src="<?php echo get_stylesheet_directory_uri().'/assets/images/quote-image.png'; ?>" /></div>
+                                    <p><?php echo $text; ?></p>
+                                    <br/><br/>
+                                    <small class="author"><?php echo $author; ?></small><br/>
+                                    <small class="company"><?php echo $function; ?></small>
+                                </div>
+                            </li>
+                            <?
+                        endwhile;
+                    }
                     ?>
-                    <div class="col-md-6 col-sm-6 testimonial-item">
-                        <div class="testimonial-item-inner">
-                            <div class="quote-img"><img src="<?php echo get_stylesheet_directory_uri().'/assets/images/quote-image.png'; ?>" /></div>
-                            <p>
-                                <?php echo $text; ?>
-                                <br/><br/>
-                                <small class="author"><?php echo $author; ?></small><br/>
-                                <small class="company"><?php echo $function; ?></small>
-                            </p>
-                        </div>
-                    </div>
-                <?php
-                endwhile;
-            }
-            ?>
+                </ul><!-- Carousel Container closing tag -->
+            </div><!-- Carousel Wrapper closing tag -->
         </div><!-- Testimonial Row closing tag -->
     </div><!-- Testimonial Container closing tag -->
 
