@@ -768,6 +768,13 @@ footer {
   display: none !important; }
 
 @media screen and (max-width: 767px) {
+  .slider-nav ul {
+    width: 110px !important; }
+    .slider-nav ul li {
+      margin-left: 10px; }
+    .slider-nav ul li:first-child {
+      margin-left: 0px; }
+
   #recent-projects-container .recent-projects-row a:first-child {
     margin-top: 0; }
   #recent-projects-container .recent-projects-row a {
