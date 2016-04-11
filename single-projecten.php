@@ -32,14 +32,6 @@ get_template_part('includes/partials/slider');
             <div class="project-info">
                 <table>
                     <tr>
-                        <td><i class="icon icon-user"></i><small>Klant:</small></td>
-                        <td><?php echo get_field('customer'); ?></td>
-                    </tr>
-                    <tr>
-                        <td><i class="icon icon-calendar"></i><small>Datum:</small></td>
-                        <td><?php echo get_field('date'); ?></td>
-                    </tr>
-                    <tr>
                         <td><i class="icon icon-location"></i><small>Locatie:</small></td>
                         <td><?php echo get_field('location'); ?></td>
                     </tr>

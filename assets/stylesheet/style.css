@@ -728,7 +728,7 @@ nav {
 
 footer {
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
   background-color: #2C353D;
   color: #ffffff; }
   footer hr {
@@ -752,6 +752,15 @@ footer {
         color: #f6a500; }
     footer ul li:first-child {
       margin-top: 0; }
+  footer .copyright {
+    font-size: 11px;
+    margin-top: 30px; }
+    footer .copyright a {
+      color: #FFFFFF;
+      font-weight: 600; }
+    footer .copyright a:hover {
+      text-decoration: none;
+      color: #f6a500; }
 
 .mobile .mobile-description {
   display: block !important; }
@@ -813,19 +822,13 @@ footer {
     padding-left: 0 !important; }
 
   #about-us .services-nav {
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: 15px;
-    margin-right: 15px;
     padding-bottom: 20px;
     border-right: none !important;
     border-bottom: 2px solid #ffffff; }
     #about-us .services-nav ul li {
-      float: left;
-      margin-top: 0;
-      margin-left: 10px; }
-    #about-us .services-nav ul li:first-child {
-      margin-left: 0; }
+      margin-left: 0 !important;
+      margin-top: 10px !important;
+      float: none !important; }
   #about-us .services-text {
     margin-top: 20px;
     padding-left: 15px !important; }
