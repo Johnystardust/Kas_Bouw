@@ -15,12 +15,14 @@
             <hr/>
 
             <ul>
-                <li>Kraaikoplaan 12</li>
-                <li>3772 PH  Barneveld</li>
-                <li>06 247 325 87</li>
-                <li>info@kasbouwentimmerwerken.nl</li>
+                <li><?php echo get_theme_mod('street'); ?></li>
+                <li><?php echo get_theme_mod('postal'); ?></li>
+                <li><a href="tel:+06 247 325 87"></a><?php echo get_theme_mod('phone'); ?></li>
+                <li><a href="mailto:<?php echo get_theme_mod('e_mail'); ?>"><?php echo get_theme_mod('e_mail'); ?></a></li>
             </ul>
         </div>
+
+        <span class="col-md-12 copyright">&copy; 2016 - Kas Bouw | Ontwikkeld door <a href="http://www.media-critics.nl" target="_blank">Media Critics</a></span>
 
     </div>
 </footer>

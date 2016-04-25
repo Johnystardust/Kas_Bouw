@@ -52,3 +52,4 @@ get_template_part('includes/partials/slider');
 |----------------------------------------------------------------
 */
 get_template_part('footer');
+wp_footer();

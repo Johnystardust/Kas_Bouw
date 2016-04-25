@@ -2,16 +2,77 @@
   position: fixed
   width: 100%
   height: 100%
+  padding: 50px
   top: 0
   left: 0
   background: rgba(0,0,0,0.7)
   z-index: 60000000
 
-  .lightbox-inner
-    padding: 50px 100px
+  .lightbox-wrapper
     width: 100%
     height: 100%
+
+  .lightbox-inner
     position: relative
-    img
+    width: 100%
+    height: 100%
+    display: block
+
+    .lb-image
+      position: absolute
+      width: 100%
+      height: 100%
+      opacity: 0
+      transition: all 0.3s ease-in-out
+      -webkit-transition: all 0.3s ease-in-out
+      -moz-transition: all 0.3s ease-in-out
+      -o-transition: all 0.3s ease-in-out
+      background-position: center
+      background-size: contain
+      background-repeat: no-repeat
+    .active
+      opacity: 1
+
+
+  .lightbox-menu
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    z-index: 60000001
+
+    .lb-menu-item
+      color: #ffffff
+      transition: all 0.3s ease-in-out
+      -webkit-transition: all 0.3s ease-in-out
+      -moz-transition: all 0.3s ease-in-out
+      -o-transition: all 0.3s ease-in-out
+    .lb-menu-item:hover
+      color: #f6a500 !important
+      text-decoration: none
+
+    .lightbox-prev
       display: block
-      margin: 0 auto
+      position: absolute
+      top: 50%
+      left: 12px
+      i
+        font-size: 18px
+
+    .lightbox-next
+      display: block
+      position: absolute
+      top: 50%
+      right: 12px
+      i
+        font-size: 18px
+
+    .lightbox-close
+      display: block
+      position: absolute
+      width: 100%
+      bottom: 10px
+      text-align: center
+      color: #ffffff
+

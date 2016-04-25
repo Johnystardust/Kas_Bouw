@@ -105,7 +105,7 @@ get_template_part('includes/partials/slider');
                 }
                 ?>
 
-                <div class="col-md-4 col-sm-12 services-nav">
+                <div class="col-lg-3 col-md-4 col-sm-12 services-nav">
                     <ul>
                         <?php
                         $o = 0;
@@ -120,7 +120,7 @@ get_template_part('includes/partials/slider');
                     </ul>
                 </div>
 
-                <div class="col-md-8 col-sm-12 services-text">
+                <div class="col-lg-9 col-md-8 col-sm-12 services-text">
                     <?php
                     $p = 0;
 
@@ -147,3 +147,4 @@ get_template_part('includes/partials/slider');
 |----------------------------------------------------------------
 */
 get_template_part('footer');
+wp_footer();

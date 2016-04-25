@@ -41,7 +41,7 @@
     <nav id="main-nav" class="container-fluid container-capped">
 
         <div class="nav-logo">
-            <a href="<?php echo get_home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri().'/assets/images/kasbouw-logo.png'; ?>"/> </a>
+            <a href="<?php echo get_home_url(); ?>"><img src="<?php echo get_theme_mod('menu_logo'); ?>"/></a>
         </div>
 
         <div class="nav-menu">

@@ -104,29 +104,30 @@ get_template_part('includes/partials/slider');
         </div>
 
         <div class="row testimonial-row">
-            <?php
-            if(have_rows('testimonial')){
-                while(have_rows('testimonial')) : the_row();
-                    $text       = get_sub_field('text');
-                    $author     = get_sub_field('author');
-                    $function   = get_sub_field('function');
-
+            <div class="carousel-wrapper">
+                <ul class="carousel-container">
+                    <?php
+                    if(have_rows('testimonial')){
+                        while(have_rows('testimonial')) : the_row();
+                                $text       = get_sub_field('text');
+                                $author     = get_sub_field('author');
+                                $function   = get_sub_field('function');
+                            ?>
+                            <li class="carousel-item">
+                                <div class="carousel-item-inner">
+                                    <div class="quote-img"><img src="<?php echo get_stylesheet_directory_uri().'/assets/images/quote-image.png'; ?>" /></div>
+                                    <p><?php echo $text; ?></p>
+                                    <br/><br/>
+                                    <small class="author"><?php echo $author; ?></small><br/>
+                                    <small class="company"><?php echo $function; ?></small>
+                                </div>
+                            </li>
+                            <?
+                        endwhile;
+                    }
                     ?>
-                    <div class="col-md-6 col-sm-6 testimonial-item">
-                        <div class="testimonial-item-inner">
-                            <div class="quote-img"><img src="<?php echo get_stylesheet_directory_uri().'/assets/images/quote-image.png'; ?>" /></div>
-                            <p>
-                                <?php echo $text; ?>
-                                <br/><br/>
-                                <small class="author"><?php echo $author; ?></small><br/>
-                                <small class="company"><?php echo $function; ?></small>
-                            </p>
-                        </div>
-                    </div>
-                <?php
-                endwhile;
-            }
-            ?>
+                </ul><!-- Carousel Container closing tag -->
+            </div><!-- Carousel Wrapper closing tag -->
         </div><!-- Testimonial Row closing tag -->
     </div><!-- Testimonial Container closing tag -->
 
@@ -162,7 +163,7 @@ get_template_part('includes/partials/slider');
                 while ($the_query->have_posts()): $the_query->the_post();
                     ?>
                     <a href="<?php the_permalink(); ?>">
-                        <div class="col-md-4 project">
+                        <div class="col-md-4 col-sm-4 project">
                             <div class="project-inner">
 
                                 <div class="project-overlay">
@@ -190,6 +191,19 @@ get_template_part('includes/partials/slider');
                                     the_post_thumbnail();
                                 }
                                 ?>
+
+                                <div class="mobile-description">
+                                    <h4><?php the_title(); ?></h4>
+                                    <div class="category">
+                                        <?php
+                                        $categories = get_the_category();
+
+                                        foreach($categories as $category){
+                                            echo '<span>'.esc_html($category->name).'</span>';
+                                        }
+                                        ?>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </a>
@@ -249,3 +263,4 @@ get_template_part('includes/partials/slider');
 |----------------------------------------------------------------
 */
 get_template_part('footer');
+wp_footer();
