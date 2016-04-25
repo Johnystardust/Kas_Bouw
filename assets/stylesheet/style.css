@@ -95,6 +95,7 @@ body {
   cursor: pointer;
   text-align: center;
   display: table;
+  opacity: 0;
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -120,6 +121,9 @@ body {
   background-color: #f6a500; }
   #go-to-top:focus i {
     color: #ffffff; }
+
+.go-to-top-active {
+  opacity: 1 !important; }
 
 * {
   margin: 0;
@@ -166,23 +170,78 @@ td {
   position: fixed;
   width: 100%;
   height: 100%;
+  padding: 50px;
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.7);
   z-index: 60000000; }
+  #lightbox .lightbox-wrapper {
+    width: 100%;
+    height: 100%; }
   #lightbox .lightbox-inner {
-    padding: 50px 100px;
+    position: relative;
     width: 100%;
     height: 100%;
-    position: relative; }
-    #lightbox .lightbox-inner img {
+    display: block; }
+    #lightbox .lightbox-inner .lb-image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat; }
+    #lightbox .lightbox-inner .active {
+      opacity: 1; }
+  #lightbox .lightbox-menu {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 60000001; }
+    #lightbox .lightbox-menu .lb-menu-item {
+      color: #ffffff;
+      transition: all 0.3s ease-in-out;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out; }
+    #lightbox .lightbox-menu .lb-menu-item:hover {
+      color: #f6a500 !important;
+      text-decoration: none; }
+    #lightbox .lightbox-menu .lightbox-prev {
       display: block;
-      margin: 0 auto; }
+      position: absolute;
+      top: 50%;
+      left: 12px; }
+      #lightbox .lightbox-menu .lightbox-prev i {
+        font-size: 18px; }
+    #lightbox .lightbox-menu .lightbox-next {
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 12px; }
+      #lightbox .lightbox-menu .lightbox-next i {
+        font-size: 18px; }
+    #lightbox .lightbox-menu .lightbox-close {
+      display: block;
+      position: absolute;
+      width: 100%;
+      bottom: 10px;
+      text-align: center;
+      color: #ffffff; }
+
+.mobile nav {
+  position: relative !important; }
 
 nav {
   height: 80px;
   width: 100%;
-  position: relative;
+  position: fixed;
   background-color: #ffffff;
   font-family: "Raleway", sans-serif;
   font-size: 13px;
@@ -271,10 +330,14 @@ nav {
   .menu-close .nav-menu ul li a {
     line-height: 60px !important; }
 
+.mobile #slider {
+  margin-top: 0 !important; }
+
 #slider {
   position: relative;
   height: 450px;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-top: 80px; }
   #slider .slide-container {
     margin-left: 0;
     height: 100%;
@@ -690,7 +753,7 @@ nav {
           #single-projecten .single-projecten-images .project-image .project-image-inner .project-image-overlay .project-image-overlay-inner i {
             font-size: 46px;
             position: relative;
-            top: -460px;
+            top: -860px;
             -webkit-transition: all 0.3s ease-in-out;
             -moz-transition: all 0.3s ease-in-out;
             -o-transition: all 0.3s ease-in-out;
@@ -724,7 +787,17 @@ nav {
       text-align: left;
       margin-left: 0; }
     #single-projecten .posts-nav .button i {
-      font-size: 11px; }
+      font-size: 11px;
+      left: 0;
+      position: relative;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
+    #single-projecten .posts-nav .previous-post-link .button:hover i {
+      left: -5px !important; }
+    #single-projecten .posts-nav .next-post-link .button:hover i {
+      left: 5px !important; }
 
 footer {
   padding-top: 50px;
@@ -809,6 +882,9 @@ footer {
     margin-top: 20px;
     padding-left: 15px !important; } }
 @media screen and (max-width: 992px) {
+  .single-projecten-images {
+    margin-top: 30px; }
+
   .container-capped {
     padding-left: 30px !important;
     padding-right: 30px !important; }
@@ -845,9 +921,6 @@ footer {
   #contact .sidebar {
     margin-top: 50px; } }
 @media screen and (max-width: 1024px) {
-  .single-projecten-images {
-    margin-top: 30px; }
-
   #main-nav .menu-container {
     position: absolute;
     left: 0;

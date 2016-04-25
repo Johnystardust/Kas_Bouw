@@ -57,32 +57,6 @@ $(document).ready(function(){
 
     /*
     |-------------------------------------------------------------------------------------------------------------------
-    |   Lightbox Functionality.
-    |-------------------------------------------------------------------------------------------------------------------
-    */
-    var lightbox = $('#lightbox');
-
-    // Lightbox function
-    lightbox.hide();
-
-    $('.open-lightbox').click(function(){
-        // Get the image that is to be displayed in the lightbox
-        var lightboxImage = $(this).attr('href');
-
-        lightbox.fadeIn();
-
-        // Add the image to the lightbox
-        lightbox.find('img').attr('src', lightboxImage);
-
-        return false;
-    });
-
-    $(window).click(function(){
-        lightbox.fadeOut();
-    });
-
-    /*
-    |-------------------------------------------------------------------------------------------------------------------
     |   About us Services Function.
     |-------------------------------------------------------------------------------------------------------------------
     */
@@ -148,14 +122,13 @@ $(document).ready(function(){
     |-------------------------------------------------------------------------------------------------------------------------------------------------
     */
     var $scroll_top = $('#go-to-top');
-    $scroll_top.hide();
 
     // Scroll to top fadeIn/fadeOut
     $(window).scroll(function(){
         if ($(this).scrollTop() > 300) {
-            $scroll_top.fadeIn();
+            $scroll_top.addClass('go-to-top-active');
         } else {
-            $scroll_top.fadeOut();
+            $scroll_top.removeClass('go-to-top-active');
         }
     });
 

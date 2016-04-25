@@ -262,5 +262,5 @@ get_template_part('includes/partials/slider');
 |   Get the Footer.
 |----------------------------------------------------------------
 */
+get_template_part('footer');
 wp_footer();
-//get_template_part('footer');

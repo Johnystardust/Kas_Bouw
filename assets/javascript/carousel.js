@@ -14,13 +14,19 @@ $(document).ready(function(){
     var item_width;
     var ul_width;
 
+    var windowWidth     = $(window).width();
     /*
     |----------------------------------------------------------------
     |  CalcItemWidth Function
     |----------------------------------------------------------------
     */
     function calcItemWidth(){
-        item_width = wrapper.width() / 2;
+        if(windowWidth < 992){
+            item_width = wrapper.width() / 1;
+        }
+        else {
+            item_width = wrapper.width() / 2;
+        }
         ul_width = item_width * (slide_count + 1);
     }
     calcItemWidth();
@@ -50,6 +56,8 @@ $(document).ready(function(){
     |----------------------------------------------------------------
     */
     $(window).resize(function(){
+        windowWidth = $(window).width();
+
         calcItemWidth();
         setCss();
     });

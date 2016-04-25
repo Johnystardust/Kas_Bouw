@@ -41,6 +41,8 @@ get_template_part('includes/partials/slider');
 
         <div class="col-md-8 no-padding single-projecten-images">
             <?php
+            $i = 1;
+
             foreach(get_field('images') as $image){
 
                 if($image['size']){
@@ -58,7 +60,7 @@ get_template_part('includes/partials/slider');
                 }
                 ?>
                 <div class="<?php echo $image_size; ?> project-image">
-                    <a href="<?php echo $image['image']; ?>" class="open-lightbox">
+                    <a href="<?php echo $image['image']; ?>" class="open-lightbox" data-index="<?php echo $i; ?>">
                         <div class="project-image-inner">
 
                             <div class="project-image-overlay">
@@ -75,6 +77,8 @@ get_template_part('includes/partials/slider');
                     </a>
                 </div>
                 <?php
+
+                $i++;
             }
             ?>
         </div>
@@ -119,8 +123,15 @@ get_template_part('includes/partials/slider');
 */
 ?>
 <div id="lightbox">
-    <div class="lightbox-inner">
-        <img src="<?php echo get_stylesheet_directory_uri().'/assets/images/project-single-2.jpg'; ?>" height="100%" />
+    <div class="lightbox-menu">
+        <a href="#" class="lightbox-prev lb-menu-item"><i class="icon icon-left-open"></i></a>
+        <a href="#" class="lightbox-next lb-menu-item"><i class="icon icon-right-open"></i></a>
+        <a href="#" class="lightbox-close lb-menu-item"><i class="icon icon-cancel"> Click to close</i></a>
+    </div>
+
+    <div class="lightbox-wrapper">
+        <div class="lightbox-inner">
+        </div>
     </div>
 </div>
 
@@ -131,3 +142,4 @@ get_template_part('includes/partials/slider');
 |----------------------------------------------------------------
 */
 get_template_part('footer');
+wp_footer();
