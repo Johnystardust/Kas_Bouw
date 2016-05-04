@@ -66,11 +66,16 @@ class tvds_recent_projects_widget extends WP_Widget {
         |   Get all the included category id's.
         |----------------------------------------------------------------
         */
-        $included_categories = array();
+        if(is_array($categories)){
+            $included_categories = array();
 
-        foreach($categories as $category){
-            $cat_id = get_cat_ID($category['category']);
-            array_push($included_categories, $cat_id);
+            foreach($categories as $category){
+                $cat_id = get_cat_ID($category['category']);
+                array_push($included_categories, $cat_id);
+            }
+        }
+        else {
+            $included_categories = '';
         }
 
         /*

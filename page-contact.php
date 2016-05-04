@@ -33,7 +33,7 @@ get_template_part('includes/partials/slider');
             </div>
 
             <div class="form">
-                <?php echo do_shortcode('[contact-form-7 id="97" title="Contact form 1"]'); ?>
+                <?php echo do_shortcode(get_field('contact_form_7_shortcode')); ?>
             </div>
 
         </div>
@@ -52,4 +52,3 @@ get_template_part('includes/partials/slider');
 |----------------------------------------------------------------
 */
 get_template_part('footer');
-wp_footer();
