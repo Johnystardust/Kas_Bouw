@@ -125,6 +125,11 @@ body {
 .go-to-top-active {
   opacity: 1 !important; }
 
+.wpcf7-response-output {
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important; }
+
 * {
   margin: 0;
   padding: 0; }
